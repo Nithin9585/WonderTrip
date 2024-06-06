@@ -1,0 +1,118 @@
+
+
+<style>
+  .btn-search{
+    background-color: #F6EEC9;
+    color: #EE4E4E;
+    border-radius: 25px;
+    padding: 0 1rem 0 1rem;
+  }
+  .btn-search:hover{
+    background-color: #EEEEEE;
+    color: #EE4E4E;
+    border: 1px solid #F6EEC9;
+  }
+  .btn-search i{
+    display: inline;
+    margin-right: 0.5rem;
+  }
+  .search-input{
+    width: 45rem;
+    border-radius: 25px;
+    padding: 0.5rem 3rem 0.5 3rem;
+    font-size: 1rem;
+
+  }
+  .logo{
+    font-size: 40px;
+    margin-left: 0.5rem;
+    margin-bottom: 0.7rem;
+    cursor: pointer;
+  }
+  spam{
+    font-size: 40px;
+    margin-left: 0.3rem;
+    cursor: pointer;
+
+
+
+  }
+  #logo-title{
+    font-size: 20px;
+    font-weight: 1.5;
+    cursor: pointer;
+
+  }
+  .logo{
+    
+  animation: spin 2s linear infinite;
+}
+.log{
+  color: #F6EEC9;
+  background-color: #EE4E4E;
+  border-radius: 4px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+a{
+  color: #F6EEC9;
+}
+
+
+  
+  
+</style>
+
+<nav class="navbar navbar-expand-lg bg-body-light border-bottom sticky-top"> <!--sticky top to make it sticky-->
+ 
+    <div class="container-fluid">
+      <i class="fa-brands fa-nfc-directional logo"></i><p id="logo-title"><spaM>W</spaM>onderTrip</p>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link " href="/listings">Explore</a>
+          
+        </div>
+        <div class="navbar-nav ms-auto offset-2 d-flex flex-wrap">
+          <form class="d-flex me-auto" action="">
+            <input class="form-control me-2 search-input border-0" type="search" placeholder="Search Destinations" aria-label="Search">
+            <button class="btn btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+          </form>
+        </div>
+        
+
+        <div class="navbar-nav ms-auto">
+          <div class="input-group mb-3">
+            <div class="input-group-append ">
+            </div>
+
+          </div>
+        </div>
+
+
+        
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" href="/listings/new"><span>Add Your New  Home</span></a>
+
+          <%if(!currUser){%>
+          <a class="nav-link log"  href="/signup"><b>Signup</b></a>
+          <a class="nav-link log" href="/login"><b>Login</b></a>
+          <%}%>
+          <%if(currUser){%>
+
+          <a class="nav-link log" href="/logout">Logout</a>
+          <%}%>
+
+        </div>
+      </div>
+    </div>
+  </nav>

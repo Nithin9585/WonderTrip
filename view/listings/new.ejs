@@ -1,0 +1,64 @@
+<% layout("layouts/boilerplate") %>
+<body>
+  
+<div class="row">
+  <div class="col-8 offset-2">
+
+    
+    <title>Create New Listing</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <div class="container mt-5">
+      <h3>Create a New Listing</h3>
+      <form method="POST" class="needs-validation" action="/listings" enctype="multipart/form-data" novalidate>
+        
+        <div class="form-group">
+          <label for="title" class="form-label" >Title </label>
+
+      <input name="listing[title]"  type="text" class="form-control" required/>
+    </div>
+  <div class="mb-3">  
+    <label for="description" class="form-label">Description</label>
+
+      <textarea name="listing[description]" class="form-control" required>
+                 </textarea
+      >
+    </div>
+   
+
+      <div class="mb-3">  
+        <label for="image" class="form-label" >Upload Image </label>
+
+      <input name="listing[image]"  type="file" class="form-control" required/>
+      </div>
+      <div class="row">
+        <div class="mb-3 col-md-6">
+            <label for="price" class="form-label">Price</label>
+            <input id="price" name="listing[price]" type="number"  class="form-control" required/>
+        </div>
+        
+
+
+
+    
+        <div class="mb-3 col-md-6">
+            <label for="country" class="form-label">Country</label>
+            <input id="country" name="listing[country]" type="text" class="form-control" required/>
+        </div>
+    </div>
+    <div class="mb-3">  
+      <label for="location" class="form-label">Location</label>
+      <input id="location" name="listing[location]" type="text"  placeholder="Enter location" class="form-control" required/>
+  </div>
+  
+  
+     
+      <button class="btn btn-dark edit-btn" type="submit" class="btn btn-dark">  New
+      </button>
+    </form>
+    </div>
+  </div>
+</div>
+</body>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evSXbVzTVFT4GX6fbsmMHs6y1clUrzSOuL0JSkONaCWXvT6jy5v4pTOmSQzD9ZVq" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="script"></script>
