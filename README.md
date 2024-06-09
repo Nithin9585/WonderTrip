@@ -60,3 +60,19 @@ SESSION_SECRET=your_session_secret
 5. Start the application
     ```bash
    npm start
+6. Usage
+Navigate to http://localhost:3000 in your browser.
+Sign up or log in to access features.
+Create, view, edit, and delete listings.
+Upload images for your listings.
+View listing locations on the integrated Mapbox map.
+
+7. Contributing
+Fork the repository
+Create a new branch (git checkout -b feature-branch)
+Commit your changes (git commit -am 'Add new feature')
+Push to the branch (git push origin feature-branch)
+Create a new Pull Request
+
+
+
