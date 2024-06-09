@@ -33,7 +33,7 @@ Check out the live demo: https://a-nhif.onrender.com (LIVE_DEMO_LINK).
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB Atlas
 - **Authentication**: Passport.js
-- **Image Storage**: Cloudinary, AWS S3
+- **Image Storage**: Cloudinary
 - **Map Integration**: Mapbox
 - **Hosting**: Render
 
