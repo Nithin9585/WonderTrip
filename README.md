@@ -11,9 +11,7 @@ It follows the MVC architecture and includes features like CRUD operations, user
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Folder Structure](#folder-structure)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Live Demo
 
