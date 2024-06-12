@@ -1,17 +1,18 @@
 
 .navbar {
     height: 5rem;
-   background-color: #EE4E4E;
-    
+    background: #8E2DE2; 
+    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  
+    background: linear-gradient(to right, #4A00E0, #8E2DE2); 
 }
 
 a svg {
     color: #E1F7F5;
-    transform: rotate(25deg) scale(1.5);
     margin-left: 2rem;
 }
 .nav-link{
-    color:#1E0342 !important;
+    color: #E1F7F5 !important;
+    
 }   
 
 
@@ -43,7 +44,9 @@ a svg {
     text-align: center;
     display: flex;
     height: 8rem;
-    background-color: #EE4E4E;
+    background: #8E2DE2; 
+    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  
+    background: linear-gradient(to right, #4A00E0, #8E2DE2); 
     flex-wrap: wrap;
     justify-content: center;
     align-items:space-evenly;
@@ -196,3 +199,20 @@ body::-webkit-scrollbar {
         margin-top: auto;
       }
       
+.navbar-nav{
+    background-color: rgba(73, 46, 135, 0.8); 
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 3rem;
+    border-radius: 1.5rem;
+    margin-right: 2px;
+    backdrop-filter: blur(50px);
+
+}
+
+.navbar-nav a{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
