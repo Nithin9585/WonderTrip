@@ -57,7 +57,9 @@ SESSION_SECRET=your_session_secret
 
 5. Start the application
     ```bash
-   npm start
+   npm app.js
+please note:
+      if you are running locally please replace the mongodb Atlas link with your mongodb link
 6. Usage
 Navigate to http://localhost:3000 in your browser.
 Sign up or log in to access features.
