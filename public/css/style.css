@@ -38,6 +38,10 @@ a svg {
 
 .f-info-socials svg{
     margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    cursor: pointer;
+}
+.f-info-socials i{
+    cursor: pointer;
 }
 
 .f-info{
