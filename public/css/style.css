@@ -207,7 +207,6 @@ body::-webkit-scrollbar {
     background-color: rgba(73, 46, 135, 0.8); 
     align-items: center;
     justify-content: space-between;
-    margin-left: 3rem;
     border-radius: 1.5rem;
     margin-right: 2px;
     backdrop-filter: blur(50px);
@@ -215,14 +214,11 @@ body::-webkit-scrollbar {
 }
 
 .navbar-nav a{
-    display: flex;
     align-items: center;
     justify-items: center;
 }
 
-.filters{
 
-}
 @keyframes appear {
     from {
         opacity: 0;

@@ -1,115 +1,110 @@
-
-
 <style>
-.wrap {
-  margin: 2rem 4rem 2rem 4rem;
-  display: flex;
-  flex:1;
-  justify-content: center;
-  margin-top: 10px; 
-  margin-bottom: 10px;
-  font-family: monospace; 
-}
-.search {
-  width: 100%;
-  position: relative;
-  display: flex;
-}
-
-.searchTerm {
-  width: 100%;
-  border: 3px solid #8576FF;
-  border-right: none;
-  padding: 5px;
-  height: 20px;
-  border-radius: 5px 0 0 5px;
-  outline: none;
-  color: #9DBFAF;
-  height: 36px;
-  padding: 0.5rem 1rem;
-
-}
-
-.searchTerm:focus{
-  color: #8576FF;
-}
-
-.searchButton {
-  width: 40px;
-  height: 36px;
-  border: 1px solid #8576FF;
-  background: #8576FF;
-  text-align: center;
-  justify-content: center;
-  color: #1C1678;
-  border-radius: 0 5px 5px 0px;
-  cursor: pointer;
-  position: absolute;
-  right: 0;
+  .wrap {
+    margin: 2rem 4rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; 
+    margin-bottom: 10px;
+    font-family: monospace; 
+  }
+  
+  .search-bar {
+    display: flex;
+    flex: 1;
+    position: relative;
+    margin: 10px;
+  }
+  
+  .searchTerm {
+    flex: 1; 
+    border: 3px solid #8576FF;
+    border-right: none;
+    padding: 0.5rem 1rem;
+    height: 36px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+  }
+  
+  .searchTerm:focus {
+    color: #8576FF;
+  }
+  
+  .searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #8576FF;
+    background: #8576FF;
+    color: #1C1678;
+    border-radius: 0 5px 5px 0px;
+    cursor: pointer;
     font-size: 20px;
-}
-  .logo{
+  }
+
+  .logo {
     font-size: 40px;
     margin-left: 0.5rem;
     margin-bottom: 0.7rem;
     cursor: pointer;
     color: #8576FF;
   }
-  spam{
+  
+  .spam {
     font-size: 40px;
     margin-left: 0.3rem;
     cursor: pointer;
-
-
-
   }
-  #logo-title{
+  
+  #logo-title {
     font-size: 20px;
     font-weight: 1.5;
     cursor: pointer;
-    color:#F8EDFF; 
+    color: #F8EDFF; 
     padding-right: 1rem;
   }
   
-.log{
-  color: #8576FF;
-  border-radius: 4px;
-}  
+  .log {
+    color: #8576FF;
+    border-radius: 4px;
+  }
 </style>
-<nav class="navbar navbar-expand-lg bg-body-light border-bottom sticky-top"> <!--sticky top to make it sticky-->
+<nav class="navbar navbar-expand-lg bg-body-light border-bottom sticky-top">
   <div class="container-fluid">
-    <i class="fa-brands fa-nfc-directional logo"></i>
-    <p id="logo-title"><spaM>W</spaM>onderTrip</p>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link" href="/listings">Explore</a>
+      <i class="fa-brands fa-nfc-directional logo"></i>
+      <p id="logo-title"><span class="spam">W</span>onderTrip</p>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+              <a class="nav-link" href="/listings">Explore</a>
+          </div>
+          <div class="search-bar">
+              <input class="searchTerm" type="text" placeholder="Search...">
+              <button class="searchButton">🔍</button>
+          </div>
+          <div class="navbar-nav ms-auto">
+              <a class="nav-link" href="/listings/new">
+                  <span id="txt">New</span>
+              </a>
+              <% if(!currUser) { %>
+                  <a class="nav-link log" href="/signup"><b>Signup</b></a>
+                  <a class="nav-link log" href="/login"><b>Login</b></a>
+              <% } %>
+              <% if(currUser) { %>
+                  <a class="nav-link log" href="/logout">Logout</a>
+              <% } %>
+          </div>
       </div>
-      <div class="wrap">
-        <div class="search">
-          <input type="text" class="searchTerm" placeholder="What are you looking for?">
-          <button type="submit" class="searchButton">
-            <i class="fa fa-search"></i>
-          </button>
-        </div>
-      </div>
-      
-      <div class="navbar-nav ms-auto">
-        <a class="nav-link" href="/listings/new"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-add-fill" viewBox="0 0 16 16">
-          <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 1 1-1 0v-1h-1a.5.5 0 1 1 0-1h1v-1a.5.5 0 0 1 1 0"/>
-          <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"/>
-          <path d="m8 3.293 4.712 4.712A4.5 4.5 0 0 0 8.758 15H3.5A1.5 1.5 0 0 1 2 13.5V9.293z"/>
-        </svg><span id="txt-1">&nbsp;&nbsp;&nbsp;New</span></a>
-        <%if(!currUser){%>
-        <a class="nav-link log" href="/signup"><b>Signup</b></a>
-        <a class="nav-link log" href="/login"><b>Login</b></a>
-        <%}%>
-        <%if(currUser){%>
-        <a class="nav-link log" href="/logout">Logout</a>
-        <%}%>
-      </div>
-    </div>
   </div>
 </nav>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      const toggler = document.querySelector('.navbar-toggler');
+      const navbarCollapse = document.getElementById('navbarNavAltMarkup');
+
+      toggler.addEventListener('click', function () {
+          navbarCollapse.classList.toggle('show');
+      });
+  });
+</script>
