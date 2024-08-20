@@ -1,4 +1,4 @@
-if(process.env.NODE_ENV != "productiion"){
+if(process.env.NODE_ENV !== "productiion"){
   require('dotenv').config();
 
 }
@@ -34,7 +34,7 @@ const sessionOptions = {
   store,
   secret: process.env.SECRET,
   resave: false,
-  savaUnintialized :true,
+  saveUninitialized :true,
   cookie:{
     expires: Date.now()+7 * 24 * 60 * 60 * 1000,
     maxAge:7 * 24 * 60 * 60 * 1000,
